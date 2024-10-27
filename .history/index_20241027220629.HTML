@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Manya</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Dancing+Script&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Roboto', sans-serif;
+            background: #1a1a2e;
+            color: #f8f3f3;
+            overflow-x: hidden; 
+            scroll-behavior: smooth; 
+        }
+        header {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 100vh;
+            color: #ffcef3;
+            text-align: center;
+            background-image: url('path/to/dark-hero-image.jpg'); /* Replace with actual background image */
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            animation: fadeIn 1.5s ease-in;
+        }
+        header img {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            margin-top: 20px;
+            object-fit: cover;
+            border: 4px solid #ffcef3;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.6);
+            animation: fadeIn 2s ease-out;
+            transition: transform 0.3s; /* Smooth transition for scaling */
+        }
+        header img:hover {
+            animation: wiggle 0.5s infinite; /* Add wiggle effect on hover */
+        }
+        header h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 4rem;
+            margin: 20px 0 0;
+            position: relative;
+            z-index: 1;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
+            animation: slideIn 1s ease-out, glow 1.5s infinite alternate; 
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+            animation: fadeIn 1s ease-in;
+        }
+        .letter-section {
+            background: #3e2c4e;
+            padding: 20px;
+            border: 2px solid #ffcef3;
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+            margin: 20px 0;
+            width: 90%;
+            max-width: 600px;
+            font-family: 'Dancing Script', cursive;
+            color: #ffddf4;
+            position: relative;
+            z-index: 1;
+            animation: fadeIn 1s ease-in, bounce 1s infinite alternate;
+        }
+        audio {
+            margin: 10px 0;
+            border-radius: 10px;
+            border: 1px solid #ffb3c1;
+            z-index: 1;
+            animation: fadeIn 1s ease-in;
+            width: 100%; /* Full width for audio player */
+            background: #3e2c4e; /* Background color */
+            color: #ffddf4; /* Text color */
+            padding: 10px; /* Padding around the audio player */
+        }
+        .voice-message-section {
+            background: #3e2c4e;
+            padding: 20px;
+            border: 2px solid #ffcef3;
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+            margin: 20px 0;
+            width: 90%;
+            max-width: 600px;
+            font-family: 'Dancing Script', cursive;
+            color: #ffddf4;
+            position: relative;
+            z-index: 1;
+            animation: fadeIn 1s ease-in;
+        }
+        .footer {
+            text-align: center;
+            margin: 20px 0;
+            color: #ffddf4;
+            animation: fadeIn 1s ease-in;
+        }
+        button, a {
+            background: linear-gradient(135deg, #ffb3c1, #ff97a5);
+            color: #f8f3f3;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 8px;
+            font-size: 16px;
+            text-decoration: none;
+            transition: background-color 0.3s, transform 0.2s;
+            margin-top: 10px;
+            display: inline-flex;
+            align-items: center;
+            position: relative;
+            z-index: 1;
+            animation: fadeIn 1s ease-in;
+        }
+        button:hover, a:hover {
+            background: linear-gradient(135deg, #ff97a5, #ffb3c1); 
+            transform: translateY(-2px) scale(1.05); 
+        }
+
+        /* Keyframe animations for fadeIn, slideIn, glow, bounce, wiggle */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes slideIn {
+            from { transform: translateY(-50px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        @keyframes glow {
+            0% { text-shadow: 0 0 10px #ffcef3, 0 0 20px #ffcef3, 0 0 30px #ffb3c1; }
+            100% { text-shadow: 0 0 20px #ffb3c1, 0 0 30px #ffb3c1, 0 0 40px #ff97a5; }
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        @keyframes wiggle {
+            0% { transform: rotate(0deg); }
+            25% { transform: rotate(5deg); }
+            50% { transform: rotate(-5deg); }
+            75% { transform: rotate(5deg); }
+            100% { transform: rotate(0deg); }
+        }
+
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 2.5rem;
+            }
+            .letter-section, .voice-message-section {
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <img src="567.jpg" alt="Manya's Photo"> <!-- Add Manya's image path here -->
+    <h1>Happy Birthday, Manya!</h1>
+</header>
+
+<div class="container">
+    <div class="letter-section">
+        <h2>Dear Manya,</h2>
+        <p>
+            On this special day, I want to take a moment to reflect on all the beautiful memories we’ve shared. You brought a light into my life that I will always cherish. Your laughter and kindness have left an indelible mark on my heart.
+            
+            Though our paths have taken us in different directions, I hope you know how much I value the time we spent together. Each moment, from our long conversations to our shared dreams, has shaped who I am today. I am grateful for the lessons we learned and the joy we found in each other’s company.
+            
+            As you celebrate your birthday, I wish you all the happiness and success in the world. May this year bring you new adventures, love, and laughter. Remember, you deserve all the beautiful things life has to offer.
+            
+            Thank you for being a part of my life, even if just for a season. I hope we can continue to grow as friends, supporting each other on our journeys.
+            
+            Happy birthday, Manya! Enjoy your special day to the fullest.
+            
+            With warmest wishes,
+            Raghav
+        </p>
+        <p>Forever your friend,<br>Raghav</p>
+    </div>
+
+    <div class="voice-message-section">
+        <h2>Voice Message for You</h2>
+        <audio id="voice-message" controls>
+            <source src="56.waptt.mp3" type="audio/mp3"> <!-- Replace with your voice message path -->
+            Your browser does not support the audio element.
+        </audio>
+    </div>
+
+    <audio id="bg-music" autoplay loop>
+        <source src="Mitwa Karaoke.mp3" type="audio/mp3">
+        Your browser does not support the audio element.
+    </audio>
+
+    <div class="footer">
+        <button onclick="document.getElementById('bg-music').play()">Play Music</button>
+        <button onclick="document.getElementById('bg-music').pause()">Pause Music</button>
+    </div>
+</div>
+
+</body>
+</html>
